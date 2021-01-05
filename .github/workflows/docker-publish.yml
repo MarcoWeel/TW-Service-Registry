@@ -9,5 +9,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: build image
         run: |
-          docker build ./service-registry -t marcoweel/tw_service_registry:latest
+          mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=marcoweel/tw_service_registry
     
