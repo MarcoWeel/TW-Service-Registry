@@ -57,7 +57,7 @@ jobs:
       - name: Push image
         run: |
           IMAGE_ID=docker.io/marcoweel/$IMAGE_NAME
-          echo "1.0.0-$(date +'%Y-%m-%dT%H.%M.%S')" >> $VERSION
+          VERSION=$(echo "1.0.0-$(date +'%Y-%m-%dT%H.%M.%S')")
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
