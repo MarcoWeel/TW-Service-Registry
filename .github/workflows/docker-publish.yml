@@ -68,6 +68,7 @@ jobs:
 
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
+          cd service-registry
           ./mvnw spring-boot:build-image -D spring-boot.build-image.imageName=$IMAGE_NAME
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
