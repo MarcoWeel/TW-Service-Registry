@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-            docker build . --file Dockerfile
+            mvn test
 
 
   # Push image to GitHub Packages.
