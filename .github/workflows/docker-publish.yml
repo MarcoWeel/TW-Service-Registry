@@ -31,7 +31,7 @@ jobs:
 
       - name: Run tests
         run: |
-            mvn -B test --file pom.xml
+            mvn -B test --file /service-registry/pom.xml
 
 
   # Push image to GitHub Packages.
