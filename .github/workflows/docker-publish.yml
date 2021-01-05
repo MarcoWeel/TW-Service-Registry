@@ -51,7 +51,9 @@ jobs:
           java-version: 11
       - uses: Deep-Symmetry/github-version-action@v1
         with:
-          var-name: 'VERSION'
+          var-name: 'ALTVERSION'
+          mvn-var-name: 'VERSION'
+          tag-var-name: 'version_tag'
 
       - name: Log into registry
         run: | 
