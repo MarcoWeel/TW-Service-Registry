@@ -25,10 +25,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 11
 
       - name: Run tests
         run: |
-            mvn test
+            mvn -B test --file pom.xml
 
 
   # Push image to GitHub Packages.
